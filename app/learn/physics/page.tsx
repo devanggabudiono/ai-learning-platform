@@ -1,54 +1,62 @@
-export default function LearnPage() {
+export default function PhysicsPage() {
     return (
         <div className="max-w-6xl mx-auto py-20">
 
             <h1 className="text-4xl font-bold mb-12 text-center">
-                Choose a Subject
+                Physics Topics
             </h1>
 
-            <div className="grid md:grid-cols-3 gap-10">
+            <div className="grid md:grid-cols-2 gap-10">
 
                 <a
-                    href="/learn/physics"
+                    href="/learn/physics/mechanics"
                     className="border border-gray-800 p-8 rounded-xl hover:border-blue-500 transition"
                 >
                     <h2 className="text-2xl font-semibold mb-3">
-                        Physics
+                        Classical Mechanics
                     </h2>
 
                     <p className="text-gray-400">
-                        Mechanics, electromagnetism, thermodynamics,
-                        and modern physics.
+                        Motion, forces, Newton's laws, energy, and momentum.
                     </p>
                 </a>
 
-
                 <a
-                    href="/learn/math"
+                    href="/learn/physics/electromagnetism"
                     className="border border-gray-800 p-8 rounded-xl hover:border-blue-500 transition"
                 >
                     <h2 className="text-2xl font-semibold mb-3">
-                        Mathematics
+                        Electromagnetism
                     </h2>
 
                     <p className="text-gray-400">
-                        Algebra, calculus, linear algebra,
-                        and mathematical reasoning.
+                        Electric fields, magnetic fields, Maxwell equations.
                     </p>
                 </a>
 
-
                 <a
-                    href="/learn/programming"
+                    href="/learn/physics/thermodynamics"
                     className="border border-gray-800 p-8 rounded-xl hover:border-blue-500 transition"
                 >
                     <h2 className="text-2xl font-semibold mb-3">
-                        Programming
+                        Thermodynamics
                     </h2>
 
                     <p className="text-gray-400">
-                        Algorithms, coding fundamentals,
-                        and computer science.
+                        Heat, entropy, and laws of thermodynamics.
+                    </p>
+                </a>
+
+                <a
+                    href="/learn/physics/quantum"
+                    className="border border-gray-800 p-8 rounded-xl hover:border-blue-500 transition"
+                >
+                    <h2 className="text-2xl font-semibold mb-3">
+                        Quantum Mechanics
+                    </h2>
+
+                    <p className="text-gray-400">
+                        Wave functions, operators, and quantum states.
                     </p>
                 </a>
 
