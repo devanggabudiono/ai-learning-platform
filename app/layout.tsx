@@ -1,4 +1,5 @@
 import "./globals.css";
+import 'katex/dist/katex.min.css';
 import Link from "next/link";
 import { Sparkles, NotebookPen, Calculator, HeartPulse } from "lucide-react";
 

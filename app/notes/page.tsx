@@ -4,6 +4,8 @@ import { NotebookPen, Search, Plus, MoreVertical, FileText, ChevronRight, X, Tra
 import { useNotes, Note } from "@/app/hooks/useNotes"
 import { useState } from "react"
 import ReactMarkdown from 'react-markdown'
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex'
 
 export default function NotesPage() {
     const { notes, deleteNote } = useNotes()
@@ -109,7 +111,7 @@ export default function NotesPage() {
                                         prose prose-invert prose-amber max-w-none 
                                         prose-p:text-neutral-300 prose-p:leading-relaxed 
                                         prose-strong:text-white prose-strong:font-semibold">
-                            <ReactMarkdown>
+                            <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
                                 {activeNote.content}
                             </ReactMarkdown>
                         </div>

@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react"
 import { useParams } from "next/navigation"
 import ReactMarkdown from 'react-markdown'
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex'
 import { Sparkles, Loader2 } from "lucide-react"
 
 export default function DynamicTopicPage() {
@@ -74,7 +76,7 @@ export default function DynamicTopicPage() {
                             prose-ul:text-neutral-300 prose-li:my-1
                             prose-code:text-amber-300 prose-code:bg-amber-400/10 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none
                             prose-pre:bg-[#17191e] prose-pre:border prose-pre:border-[#1f2229] prose-pre:rounded-xl">
-                <ReactMarkdown>
+                <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
                     {material?.content || "No content generated."}
                 </ReactMarkdown>
             </div>
